@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Лабораторная работа №4 — Вариант 7</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>Регистрация аккаунта</h1>
+    <p class="subtitle">Придумайте логин и надёжный пароль.</p>
+
+    <form id="accountForm" novalidate>
+      <div class="field">
+        <label for="login">Логин</label>
+        <input id="login" type="text" placeholder="student_01" autocomplete="username">
+        <span class="hint">3–20 символов: латинские буквы, цифры и «_».</span>
+        <span class="error" id="login-error"></span>
+      </div>
+
+      <div class="field">
+        <label for="email">E-mail</label>
+        <input id="email" type="email" placeholder="student@example.com" autocomplete="email">
+        <span class="error" id="email-error"></span>
+      </div>
+
+      <div class="field">
+        <label for="password">Пароль</label>
+        <input id="password" type="password" autocomplete="new-password">
+        <div class="meter" aria-hidden="true"><div class="meter-bar" id="strengthBar"></div></div>
+        <span class="hint" id="strengthText">Минимум 8 символов.</span>
+        <span class="error" id="password-error"></span>
+      </div>
+
+      <div class="field">
+        <label for="confirm">Повтор пароля</label>
+        <input id="confirm" type="password" autocomplete="new-password">
+        <span class="error" id="confirm-error"></span>
+      </div>
+
+      <div class="field">
+        <label class="check" for="showPassword">
+          <input id="showPassword" type="checkbox">
+          <span>Показать пароли</span>
+        </label>
+      </div>
+
+      <button type="submit">Создать аккаунт</button>
+    </form>
+
+    <div id="message" class="message" role="status" aria-live="polite"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

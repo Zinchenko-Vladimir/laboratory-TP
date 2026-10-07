@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Лабораторная работа №4 — Вариант 1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>Регистрация студента</h1>
+    <p class="subtitle">Заполните все поля, чтобы зарегистрироваться.</p>
+
+    <form id="studentForm" novalidate>
+      <div class="field">
+        <label for="fullName">ФИО <span class="counter" id="nameCounter">0 / 60</span></label>
+        <input id="fullName" type="text" maxlength="60" placeholder="Иванов Иван Иванович" autocomplete="name">
+        <span class="error" id="fullName-error"></span>
+      </div>
+
+      <div class="field">
+        <label for="email">E-mail</label>
+        <input id="email" type="email" placeholder="student@example.com" autocomplete="email">
+        <span class="error" id="email-error"></span>
+      </div>
+
+      <div class="field">
+        <label for="course">Курс</label>
+        <select id="course">
+          <option value="">Выберите курс</option>
+          <option value="1">1 курс</option>
+          <option value="2">2 курс</option>
+          <option value="3">3 курс</option>
+          <option value="4">4 курс</option>
+        </select>
+        <span class="error" id="course-error"></span>
+      </div>
+
+      <div class="field">
+        <label class="check" for="agree">
+          <input id="agree" type="checkbox">
+          <span>Согласен с правилами</span>
+        </label>
+        <span class="error" id="agree-error"></span>
+      </div>
+
+      <button type="submit">Зарегистрироваться</button>
+    </form>
+
+    <div id="message" class="message" role="status" aria-live="polite"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

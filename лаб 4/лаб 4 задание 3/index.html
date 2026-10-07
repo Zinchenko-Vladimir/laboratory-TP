@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Лабораторная работа №4 — Вариант 18</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>Бронирование мероприятия</h1>
+    <p class="subtitle">Выберите билеты и дополнительные опции. Итог считается автоматически.</p>
+
+    <form id="bookingForm" novalidate>
+      <div class="row">
+        <div class="field">
+          <label for="fullName">Имя</label>
+          <input id="fullName" type="text" autocomplete="name" placeholder="Айгерим Сериккызы">
+          <span class="error" id="fullName-error"></span>
+        </div>
+        <div class="field">
+          <label for="email">E-mail</label>
+          <input id="email" type="email" autocomplete="email" placeholder="name@example.com">
+          <span class="error" id="email-error"></span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label for="category">Категория билета</label>
+          <select id="category">
+            <option value="">Выберите категорию</option>
+            <option value="standard">Стандарт — 1 500</option>
+            <option value="student">Студенческий — 800</option>
+            <option value="vip">VIP — 4 000</option>
+          </select>
+          <span class="error" id="category-error"></span>
+        </div>
+        <div class="field">
+          <label for="quantity">Количество билетов</label>
+          <input id="quantity" type="number" min="1" max="10" step="1" value="1">
+          <span class="hint">От 1 до 10.</span>
+          <span class="error" id="quantity-error"></span>
+        </div>
+      </div>
+
+      <fieldset>
+        <legend>Дополнительные опции (на весь заказ)</legend>
+        <label class="check"><input type="checkbox" name="option" value="parking" data-price="500" data-title="Парковка"><span>Парковка — 500</span></label>
+        <label class="check"><input type="checkbox" name="option" value="merch" data-price="1200" data-title="Сувенирный набор"><span>Сувенирный набор — 1 200</span></label>
+        <label class="check"><input type="checkbox" name="option" value="video" data-price="2000" data-title="Видеозапись"><span>Видеозапись — 2 000</span></label>
+      </fieldset>
+
+      <div class="total-box" aria-live="polite">
+        <span>Предварительная стоимость</span>
+        <strong id="liveTotal">0</strong>
+      </div>
+
+      <div class="field">
+        <label class="check" for="agree">
+          <input id="agree" type="checkbox">
+          <span>Согласен с условиями бронирования</span>
+        </label>
+        <span class="error" id="agree-error"></span>
+      </div>
+
+      <button type="submit">Забронировать</button>
+    </form>
+
+    <div id="message" class="message" role="status" aria-live="polite"></div>
+    <div id="summary"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
