@@ -1,0 +1,47 @@
+:root {
+  --bg: #f1f4f8;
+  --card: #ffffff;
+  --text: #1d2733;
+  --muted: #6b7785;
+  --accent: #2563eb;
+  --accent-dark: #1d4ed8;
+  --ok: #16a34a;
+  --bad: #dc2626;
+  --line: #d9e0e8;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+.page-header { background: var(--accent); color: #fff; text-align: center; padding: 24px 16px; }
+.page-header h1 { margin: 0; font-size: 1.6rem; }
+.page-header p { margin: 4px 0 0; opacity: .85; }
+main { max-width: 640px; margin: 24px auto; padding: 0 16px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 20px; }
+.row { display: flex; gap: 8px; flex-wrap: wrap; }
+.row input { flex: 1 1 140px; }
+input[type="text"], input[type="number"] {
+  padding: 9px 12px; border: 1px solid var(--line); border-radius: 6px; font-size: 1rem;
+}
+input:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+button {
+  padding: 9px 16px; border: none; border-radius: 6px; background: var(--accent);
+  color: #fff; font-size: 1rem; cursor: pointer; transition: background .15s;
+}
+button:hover { background: var(--accent-dark); }
+button.danger { background: var(--bad); padding: 5px 10px; font-size: .9rem; }
+button.danger:hover { background: #b91c1c; }
+.message { min-height: 1.4em; margin: 8px 0; color: var(--bad); font-size: .95rem; }
+.message.ok { color: var(--ok); }
+.hint { color: var(--muted); font-size: .9rem; margin: 10px 0 0; }
+[hidden] { display: none !important; }
+.table { width: 100%; border-collapse: collapse; margin-top: 4px; }
+.table th, .table td { padding: 8px 10px; border-bottom: 1px solid var(--line); text-align: left; }
+.table th { background: #f5f8fc; }
+.table td:last-child { text-align: right; }
+.table tr.good td:nth-child(3) { color: var(--ok); font-weight: 600; }
+.table tr.weak td:nth-child(3) { color: var(--bad); font-weight: 600; }

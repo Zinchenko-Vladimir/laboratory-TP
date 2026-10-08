@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Задание 1 — Список покупок</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="page-header">
+    <h1>Список покупок</h1>
+    <p>Лабораторная работа №6 · Задание 1</p>
+  </header>
+  <main>
+    <section class="card">
+      <div class="row">
+        <input type="text" id="shop-input" placeholder="Например: молоко" autocomplete="off">
+        <button type="button" id="shop-add">Добавить</button>
+      </div>
+      <p class="message" id="shop-message"></p>
+      <ul class="list" id="shop-list"></ul>
+      <p class="hint">Нажмите на пункт, чтобы отметить его купленным.</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Задание 17 — Тест из 5 вопросов</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="page-header">
+    <h1>Тест по JavaScript</h1>
+    <p>Лабораторная работа №6 · Задание 17</p>
+  </header>
+  <main>
+    <section class="card">
+      <div id="quiz-progress" class="progress-text"></div>
+      <div class="progress"><div id="quiz-bar" class="progress-bar"></div></div>
+
+      <div id="quiz-box">
+        <h2 id="quiz-question"></h2>
+        <div id="quiz-options" class="options"></div>
+        <p class="message" id="quiz-feedback"></p>
+        <button type="button" id="quiz-next" hidden>Дальше</button>
+      </div>
+
+      <div id="quiz-result" hidden>
+        <h2 id="quiz-score"></h2>
+        <p id="quiz-comment"></p>
+        <button type="button" id="quiz-restart">Пройти ещё раз</button>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
