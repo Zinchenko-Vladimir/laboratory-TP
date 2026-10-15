@@ -1,0 +1,28 @@
+:root { --bg:#eef2f1; --surface:#fff; --ink:#18302b; --muted:#667a74; --line:#d3ddda; --accent:#0f7a5f; --on:#fff; --danger:#b3382a; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg:#0f1a17; --surface:#172622; --ink:#e3f0ec; --muted:#93aaa3; --line:#294039; --accent:#4cc9a2; --on:#0c1c17; --danger:#ff8f7e; }
+}
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+.app { max-width:640px; margin:0 auto; padding:24px 16px 48px; }
+h1 { margin:0 0 16px; font-size:1.7rem; }
+.add { display:flex; gap:8px; }
+input { flex:1; min-width:0; padding:11px 12px; font:inherit; color:var(--ink); background:var(--surface); border:1px solid var(--line); border-radius:8px; }
+button { font:inherit; cursor:pointer; }
+.primary { padding:11px 18px; border:0; border-radius:8px; background:var(--accent); color:var(--on); font-weight:600; }
+.error { min-height:1.4em; margin:6px 2px 10px; color:var(--danger); font-size:.9rem; }
+.tabs { display:flex; border-bottom:2px solid var(--line); margin-bottom:12px; overflow-x:auto; }
+.tab { flex:1 0 auto; padding:10px 12px; background:none; border:0; border-bottom:3px solid transparent; margin-bottom:-2px; color:var(--muted); font-weight:500; }
+.tab.active { color:var(--accent); border-bottom-color:var(--accent); font-weight:700; }
+.count { display:inline-block; min-width:1.5em; padding:0 6px; margin-left:3px; border-radius:99px; background:var(--line); color:var(--ink); font-size:.8rem; text-align:center; }
+.tab.active .count { background:var(--accent); color:var(--on); }
+.list { list-style:none; margin:0; padding:0; display:grid; gap:8px; }
+.item { display:flex; align-items:center; gap:12px; padding:10px 12px; background:var(--surface); border:1px solid var(--line); border-radius:8px; }
+.item input[type=checkbox] { flex:0 0 auto; width:20px; height:20px; accent-color:var(--accent); }
+.item label { flex:1; word-break:break-word; cursor:pointer; }
+.item.done label { text-decoration:line-through; color:var(--muted); }
+.del { flex:0 0 auto; background:none; border:1px solid var(--line); border-radius:6px; padding:4px 10px; color:var(--danger); }
+.empty { padding:24px 8px; text-align:center; color:var(--muted); }
+.sr { position:absolute; left:-9999px; }
+:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+@media (max-width:420px) { .add { flex-direction:column; } }
