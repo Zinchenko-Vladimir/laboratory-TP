@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Учёт расходов</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Учёт расходов</h1>
+  <form id="form">
+    <select id="category"></select>
+    <input id="amount" type="text" inputmode="decimal" placeholder="Сумма" autocomplete="off">
+    <input id="date" type="date">
+    <button type="submit">Добавить</button>
+  </form>
+  <p id="error" class="error" role="alert"></p>
+  <div class="total">Общий расход: <b id="total">0.00</b></div>
+  <div id="byCategory" class="chips"></div>
+  <table>
+    <thead><tr><th>Дата</th><th>Категория</th><th>Сумма</th><th></th></tr></thead>
+    <tbody id="rows"></tbody>
+  </table>
+  <p id="empty" class="empty">Операций пока нет.</p>
+  <script src="app.js"></script>
+</body>
+</html>

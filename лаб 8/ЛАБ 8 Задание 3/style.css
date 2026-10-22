@@ -1,0 +1,26 @@
+*{box-sizing:border-box}
+body{font-family:Arial,sans-serif;background:#eef2fb;color:#0f1b3d;max-width:760px;margin:32px auto;padding:0 16px}
+h1{font-size:28px}
+form{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}
+input,select,button{font-size:16px;padding:10px 12px;border:1px solid #cdd6ee;border-radius:8px}
+input,select{flex:1;min-width:140px}
+button{background:#0f1b3d;color:#fff;cursor:pointer;border:none}
+button:hover{opacity:.85}
+button.danger{background:#d9482b}
+.error{color:#d9482b;min-height:24px;margin:0}
+.empty{color:#566}
+ul{list-style:none;padding:0}
+li{display:flex;justify-content:space-between;align-items:center;gap:8px;background:#fff;border:1px solid #cdd6ee;border-radius:10px;padding:10px 14px;margin-bottom:8px}
+li.done span{text-decoration:line-through;color:#889}
+body{max-width:1000px}
+.board{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.col{background:#dde4f6;border-radius:14px;padding:10px;min-height:240px}
+.col h2{font-size:18px;margin:4px 0 10px}
+.col.over{outline:3px dashed #0e7c86}
+.card{background:#fff;border:1px solid #cdd6ee;border-radius:10px;padding:10px;margin-bottom:8px;cursor:grab}
+.card.dragging{opacity:.4}
+.card p{margin:0 0 8px;word-break:break-word}
+.card .tools{display:flex;gap:6px}
+.card button{padding:4px 10px;font-size:14px}
+.hint{color:#566;font-size:14px}
+@media(max-width:700px){.board{grid-template-columns:1fr}}

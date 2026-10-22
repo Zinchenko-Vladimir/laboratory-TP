@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Канбан-доска</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Канбан-доска</h1>
+  <form id="form">
+    <input id="title" type="text" placeholder="Новая задача (попадёт в «План»)" maxlength="80" autocomplete="off">
+    <button type="submit">Добавить</button>
+  </form>
+  <p id="error" class="error" role="alert"></p>
+  <div id="board" class="board"></div>
+  <p class="hint">Карточки можно перетаскивать мышью или перемещать кнопками ◀ ▶. Двойной клик по тексту или кнопка ✎ — редактирование.</p>
+  <script src="app.js"></script>
+</body>
+</html>
