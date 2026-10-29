@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вариант 13: карточки пользователей</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>Пользователи и их публикации</h1>
+      <p>Публикации пользователя подгружаются по клику на кнопку</p>
+    </header>
+    <div class="content">
+      <div class="controls">
+        <button id="retry" type="button" hidden>Повторить</button>
+      </div>
+      <p id="status" role="status"></p>
+      <div id="users" class="cards"></div>
+    </div>
+  </main>
+</body>
+</html>

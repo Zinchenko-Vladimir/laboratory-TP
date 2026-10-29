@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вариант 3: список задач</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>Список задач</h1>
+      <p>Первые 10 задач с публичного REST API, выполненные выделены цветом</p>
+    </header>
+    <div class="content">
+      <div class="controls">
+        <button id="load" type="button">Загрузить задачи</button>
+        <button id="retry" type="button" hidden>Повторить</button>
+      </div>
+      <p id="status" role="status"></p>
+      <ul id="results"></ul>
+    </div>
+  </main>
+</body>
+</html>
