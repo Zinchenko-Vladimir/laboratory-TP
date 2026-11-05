@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Корзина покупок</title>
+<link rel="stylesheet" href="./styles/style.css"></head>
+<body>
+<h1>Корзина покупок</h1>
+ <div class="layout">
+  <section><h2>Каталог</h2><ul id="catalog" class="list"></ul></section>
+  <section>
+   <h2>Корзина</h2>
+   <ul id="cart" class="list"></ul>
+   <p id="total" class="total"></p>
+   <p id="message" class="error" aria-live="polite"></p>
+   <button id="clear" class="secondary">Очистить корзину</button>
+  </section>
+ </div>
+ <script type="module" src="./src/main.js"></script>
+<script>
+ /* Запасной вариант: при открытии двойным щелчком (file://) браузер блокирует ES-модули,
+    поэтому подключается dist/bundle.js (те же модули, собранные в один файл).
+    Через http:// работают настоящие ES-модули из src/. */
+ if (location.protocol === "file:") {
+  var s = document.createElement("script");
+  s.src = "./dist/bundle.js";
+  document.body.appendChild(s);
+ }
+</script>
+
+</body></html>

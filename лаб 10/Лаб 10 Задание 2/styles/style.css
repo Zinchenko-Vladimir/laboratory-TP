@@ -1,0 +1,12 @@
+body { font: 16px Arial, sans-serif; margin: 2rem; background: #f4f6f8; }
+.layout { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+@media (max-width: 700px) { .layout { grid-template-columns: 1fr; } }
+.list { list-style: none; padding: 0; }
+.list li { display: flex; justify-content: space-between; align-items: center; gap: .5rem;
+  background: #fff; padding: .6rem .8rem; margin-bottom: .5rem; border-radius: 8px; box-shadow: 0 1px 4px #0002; }
+button { padding: .4rem .8rem; border: 0; border-radius: 6px; background: #2563eb; color: #fff; cursor: pointer; }
+button.secondary { background: #6b7280; }
+button.danger { background: #dc2626; }
+input[type=number] { width: 4rem; padding: .3rem; }
+.total { font-weight: bold; font-size: 1.2rem; }
+.error { color: #b91c1c; min-height: 1.2em; }

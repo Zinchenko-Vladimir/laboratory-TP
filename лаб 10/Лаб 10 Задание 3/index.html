@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Доска Kanban</title>
+<link rel="stylesheet" href="./styles/style.css"></head>
+<body>
+<h1>Доска Kanban</h1>
+ <form id="task-form" class="add">
+  <input id="title" type="text" placeholder="Название задачи" maxlength="80" autocomplete="off">
+  <button type="submit">Добавить</button>
+  <button type="button" id="clear" class="secondary">Очистить всё</button>
+ </form>
+ <p id="message" class="error" aria-live="polite"></p>
+ <div id="board" class="board"></div>
+ <script type="module" src="./src/main.js"></script>
+<script>
+ /* Запасной вариант: при открытии двойным щелчком (file://) браузер блокирует ES-модули,
+    поэтому подключается dist/bundle.js (те же модули, собранные в один файл).
+    Через http:// работают настоящие ES-модули из src/. */
+ if (location.protocol === "file:") {
+  var s = document.createElement("script");
+  s.src = "./dist/bundle.js";
+  document.body.appendChild(s);
+ }
+</script>
+
+</body></html>

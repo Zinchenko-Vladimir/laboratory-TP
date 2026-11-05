@@ -1,0 +1,15 @@
+body { font: 16px Arial, sans-serif; margin: 2rem; background: #f4f6f8; }
+.add { display: flex; gap: .5rem; flex-wrap: wrap; }
+.add input { flex: 1; min-width: 200px; padding: .5rem; }
+button { padding: .4rem .8rem; border: 0; border-radius: 6px; background: #2563eb; color: #fff; cursor: pointer; }
+button.secondary { background: #6b7280; }
+button.danger { background: #dc2626; }
+button:disabled { opacity: .35; cursor: not-allowed; }
+.board { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1rem; }
+@media (max-width: 700px) { .board { grid-template-columns: 1fr; } }
+.column { background: #e5e7eb; border-radius: 10px; padding: .75rem; min-height: 200px; }
+.column h2 { margin: 0 0 .75rem; font-size: 1.1rem; }
+.card { background: #fff; border-radius: 8px; padding: .6rem; margin-bottom: .5rem; box-shadow: 0 1px 4px #0002; }
+.card p { margin: 0 0 .5rem; word-break: break-word; }
+.actions { display: flex; gap: .3rem; }
+.error { color: #b91c1c; min-height: 1.2em; }
