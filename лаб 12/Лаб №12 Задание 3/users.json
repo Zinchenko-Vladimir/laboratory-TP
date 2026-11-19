@@ -1,0 +1,14 @@
+[
+  {
+    "login": "admin",
+    "name": "Администратор Системы",
+    "role": "admin",
+    "passwordHash": "a5f3396113500150cc0b7bbf4a8e99df:f6eb89c0b3f1d0c683afb224d3a36fc4647f9251269e1c35eef6f63a3f53fffb81d492ca3830d47f1854dad7db1cbc52ba3f277e74afd9471a3775736c73d596"
+  },
+  {
+    "login": "user1",
+    "name": "Сидорова Мария",
+    "role": "user",
+    "passwordHash": "3d9a5bd2b1b2bdd01f0abbaa05d95518:c47e32671b7ccaa4bad1f51558f79bdfff3b211a540d4f894ad4788cc0695a41e43448f6954fb765a7035ad6a41785ad235493d92d4d48a2cca6559f8da3459f"
+  }
+]

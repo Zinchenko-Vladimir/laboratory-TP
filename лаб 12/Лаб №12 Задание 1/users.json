@@ -1,0 +1,14 @@
+[
+  {
+    "login": "teacher1",
+    "name": "Иванова Анна Петровна",
+    "role": "teacher",
+    "passwordHash": "cd7927df797ef863910cd9220cbd50e0:565a29282157da0a9381ad50641aed76702841aeb722cc973f95bef53a2762754a0abaa028c7b20028401666719307c5a1d354e1e42f32b7f2c5f4f834075514"
+  },
+  {
+    "login": "student1",
+    "name": "Петров Пётр Сергеевич",
+    "role": "student",
+    "passwordHash": "1bfb833502d538897bb20cf6f4246d43:0f82bbea9d4750f788903ae70ce7b352014afa2034695c06b1f3c2f84fadc5b40a17949a77143d59b4e8d2f072e813414f8c85e62c0b9801525d230386bcccdc"
+  }
+]

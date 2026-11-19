@@ -1,0 +1,8 @@
+{
+  "name": "variant17-advanced",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Лабораторная №12. Вариант 17 (повышенный)",
+  "scripts": { "start": "node server.js", "test": "node test.js" },
+  "engines": { "node": ">=18" }
+}

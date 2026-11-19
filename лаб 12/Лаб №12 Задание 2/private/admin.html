@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Панель администратора</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<main>
+  <h1>Панель администратора</h1>
+  <section class="card">
+    <table>
+      <thead><tr><th>Логин</th><th>Имя</th><th>Роль</th><th>Статус</th><th></th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </section>
+  <p id="status" class="status" role="status"></p>
+  <p><a href="index.html">← На главную</a> <button id="logout" class="danger" type="button">Выйти</button></p>
+</main>
+<script src="/admin.js"></script>
+</body>
+</html>

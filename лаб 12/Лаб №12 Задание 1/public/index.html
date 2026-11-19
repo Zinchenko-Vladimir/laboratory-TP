@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Кабинет преподавателя — вход</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>Кабинет преподавателя</h1>
+
+  <section class="card" id="loginCard">
+    <form id="loginForm" novalidate>
+      <label for="login">Логин</label>
+      <input id="login" name="login" autocomplete="username">
+      <label for="password">Пароль</label>
+      <input id="password" name="password" type="password" autocomplete="current-password">
+      <button type="submit">Войти</button>
+    </form>
+  </section>
+
+  <section class="card" id="profileCard" hidden>
+    <dl>
+      <dt>Имя</dt><dd id="pName"></dd>
+      <dt>Роль</dt><dd id="pRole"></dd>
+      <dt>Логин</dt><dd id="pLogin"></dd>
+    </dl>
+    <button id="groupsBtn" class="secondary" type="button">Мои группы (только преподаватель)</button>
+    <button id="logout" class="danger" type="button">Выйти</button>
+    <ul id="groups"></ul>
+  </section>
+
+  <p id="status" class="status" role="status"></p>
+  <p class="note">Тестовые учётные записи указаны в README.md.</p>
+</main>
+<script src="mock-server.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

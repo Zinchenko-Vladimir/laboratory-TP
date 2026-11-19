@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Учебная система — вход</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>Учебная система</h1>
+
+  <section class="card" id="loginCard">
+    <form id="loginForm" novalidate>
+      <label for="login">Логин</label>
+      <input id="login" autocomplete="username">
+      <label for="password">Пароль</label>
+      <input id="password" type="password" autocomplete="current-password">
+      <button type="submit">Войти</button>
+    </form>
+  </section>
+
+  <section class="card" id="profileCard" hidden>
+    <dl>
+      <dt>Имя</dt><dd id="pName"></dd>
+      <dt>Роль</dt><dd id="pRole"></dd>
+    </dl>
+    <!-- Ссылка скрывается только для удобства. Реальная защита — на сервере (401/403). -->
+    <a id="adminLink" href="/admin" hidden>Панель администратора →</a>
+    <p><button id="logout" class="danger" type="button">Выйти</button></p>
+  </section>
+
+  <p id="status" class="status" role="status"></p>
+  <p class="note">Тестовые учётные записи указаны в README.md.</p>
+</main>
+<script src="mock-server.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "name": "variant14-medium",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Лабораторная №12. Вариант 14 (средний)",
+  "scripts": { "start": "node server.js", "test": "node test.js" },
+  "engines": { "node": ">=18" }
+}

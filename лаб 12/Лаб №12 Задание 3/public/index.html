@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JWT: вход и обновление сессии</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>JWT: access + refresh token</h1>
+
+  <section class="card" id="loginCard">
+    <form id="loginForm" novalidate>
+      <label for="login">Логин</label>
+      <input id="login" autocomplete="username">
+      <label for="password">Пароль</label>
+      <input id="password" type="password" autocomplete="current-password">
+      <button type="submit">Войти</button>
+    </form>
+  </section>
+
+  <section class="card" id="appCard" hidden>
+    <dl>
+      <dt>Имя</dt><dd id="pName"></dd>
+      <dt>Роль</dt><dd id="pRole"></dd>
+      <dt>Access token</dt><dd id="ttl"></dd>
+    </dl>
+    <p>
+      <button id="profileBtn" class="secondary" type="button">Запросить профиль</button>
+      <button id="reportBtn" class="secondary" type="button">Админ-отчёт</button>
+      <button id="refreshBtn" class="secondary" type="button">Обновить токен</button>
+    </p>
+    <p class="note">Claims access token (сам токен не показывается):</p>
+    <pre id="claims"></pre>
+    <button id="logout" class="danger" type="button">Выйти</button>
+  </section>
+
+  <p id="status" class="status" role="status"></p>
+  <p class="note">Тестовые учётные записи указаны в README.md. Журнал запросов — в консоли браузера (F12).</p>
+</main>
+<script src="mock-server.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
